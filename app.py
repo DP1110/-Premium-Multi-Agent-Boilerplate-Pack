@@ -396,11 +396,14 @@ st.markdown(
     """
     <div class="cta-banner">
         <h2>🚀 Premium Multi-Agent Boilerplate Pack</h2>
-        <p style="margin-bottom: 0;">
+        <p style="margin-bottom: 16px;">
             Production-ready autonomous agent templates powered by Gemini&nbsp;2.5&nbsp;Flash.
             Includes function-calling loops, multi-tool orchestration, streaming,
             and cloud deployment configs.
         </p>
+        <a href="https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack" target="_blank" class="cta-btn">
+            Get the Boilerplate Pack →
+        </a>
     </div>
     """,
     unsafe_allow_html=True,
@@ -720,8 +723,8 @@ st.markdown(
         <p style="font-size:0.78rem;color:#484f58;">
             Built with ♥ using Streamlit&nbsp; ·&nbsp;
             Powered by the
-            <a href="https://github.com/public-apis/public-apis" target="_blank"
-               style="color:#00ffcc;text-decoration:none;">public-apis</a> registry&nbsp; ·&nbsp;
+            <a href="https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack" target="_blank"
+               style="color:#00ffcc;text-decoration:none;">Premium Multi-Agent Boilerplate Pack</a>&nbsp; ·&nbsp;
             Optimized for
             <a href="https://ai.google.dev/" target="_blank"
                style="color:#7928ca;text-decoration:none;">Google Gemini</a>

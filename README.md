@@ -180,10 +180,10 @@ The Premium Pack includes production-ready templates for:
 
 ### 🛒 Get the Premium Pack
 
-| Store | Link |
+| Store / Repository | Link |
 |---|---|
+| **GitHub Repository** | [github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack) |
 | **Gumroad** | [toolify.gumroad.com/l/premium-agent-pack](https://toolify.gumroad.com/l/premium-agent-pack) |
-| **GitHub Sponsors** | [github.com/sponsors/toolify-api](https://github.com/sponsors/toolify-api) |
 | **Ko-fi** | [ko-fi.com/toolifyapi](https://ko-fi.com/toolifyapi) |
 
 ---
@@ -196,7 +196,7 @@ This project is released under the [MIT License](LICENSE).
 
 <div align="center">
 
-**Built with ♥ using [Streamlit](https://streamlit.io) · Powered by [public-apis](https://github.com/public-apis/public-apis) · Optimized for [Google Gemini](https://ai.google.dev/)**
+**Built with ♥ using [Streamlit](https://streamlit.io) · Powered by the [Premium Multi-Agent Boilerplate Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack) · Optimized for [Google Gemini](https://ai.google.dev/)**
 
 </div>
 ]]>
