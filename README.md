@@ -1,6 +1,8 @@
 # Toolify-API — Premium Multi-Agent Boilerplate Pack
 
-Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Streamlit.
+![Toolify-API screenshot](https://dogimg.vercel.app/api/og?url=https://toolify-api.streamlit.app/)
+
+Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Stream[...] 
 
 [Live demo • Toolify-API (Streamlit)](https://toolify-api.streamlit.app/)
 
