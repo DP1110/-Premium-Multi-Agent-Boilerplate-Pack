@@ -2,7 +2,7 @@
 
 ![Toolify-API screenshot](https://dogimg.vercel.app/api/og?url=https://toolify-api.streamlit.app/)
 
-Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Stream[...] 
+Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Streamlit.
 
 [Live demo • Toolify-API (Streamlit)](https://toolify-api.streamlit.app/)
 
@@ -26,6 +26,18 @@ This repository includes a premium multi-agent boilerplate demonstrating autonom
 Try the hosted Streamlit demo and API examples:
 
 - Streamlit app: https://toolify-api.streamlit.app/
+
+---
+
+## Screenshots
+
+Below are screenshots of the Streamlit demo (added to the repository):
+
+![Streamlit demo - overview](Screenshot 2026-06-09 012702.png)
+
+![Streamlit demo - agent view](Screenshot 2026-06-09 012851.png)
+
+![Streamlit demo - examples](Screenshot 2026-06-09 013058.png)
 
 ---
 
