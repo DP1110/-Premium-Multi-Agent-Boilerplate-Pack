@@ -196,7 +196,7 @@ This project is released under the [MIT License](LICENSE).
 
 <div align="center">
 
-**Built with ♥ using [Streamlit](https://streamlit.io) · Powered by the [Premium Multi-Agent Boilerplate Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack) · Optimized for [Google Gemini](https://ai.google.dev/)**
+**Built with ♥ using [Streamlit](https://streamlit.io) · Powered by the [Premium Multi-Agent Boilerplate Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack)**
 
 </div>
 ]]>

@@ -724,10 +724,7 @@ st.markdown(
             Built with ♥ using Streamlit&nbsp; ·&nbsp;
             Powered by the
             <a href="https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack" target="_blank"
-               style="color:#00ffcc;text-decoration:none;">Premium Multi-Agent Boilerplate Pack</a>&nbsp; ·&nbsp;
-            Optimized for
-            <a href="https://ai.google.dev/" target="_blank"
-               style="color:#7928ca;text-decoration:none;">Google Gemini</a>
+               style="color:#00ffcc;text-decoration:none;">Premium Multi-Agent Boilerplate Pack</a>
         </p>
     </div>
     """,
