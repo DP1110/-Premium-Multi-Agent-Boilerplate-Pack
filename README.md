@@ -2,7 +2,7 @@
 
 Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Streamlit.
 
-[Live demo • Streamlit Cat Facts](https://toolify-api.streamlit.app/#cat-facts)
+[Live demo • Toolify-API (Streamlit)](https://toolify-api.streamlit.app/)
 
 ---
 
@@ -23,7 +23,7 @@ This repository includes a premium multi-agent boilerplate demonstrating autonom
 
 Try the hosted Streamlit demo and API examples:
 
-- Streamlit app (Cat Facts demo): https://toolify-api.streamlit.app/#cat-facts
+- Streamlit app: https://toolify-api.streamlit.app/
 
 ---
 
@@ -99,7 +99,7 @@ This project includes an MIT License file (see LICENSE).
 ## Contact
 
 Repository: https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack
-Streamlit demo / API examples: https://toolify-api.streamlit.app/#cat-facts
+Streamlit demo / API examples: https://toolify-api.streamlit.app/
 
 ---
 
