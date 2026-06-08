@@ -1,202 +1,106 @@
-<![CDATA[<div align="center">
+# Toolify-API — Premium Multi-Agent Boilerplate Pack
 
-# ⚡ Toolify-API
+Converted the public-apis registry into structured Gemini JSON Tool Schemas, Python `requests` wrappers, and multi-SDK integration snippets for Gemini, OpenAI, Claude, and Ollama. Built with Streamlit.
 
-### Public API → Gemini Tool Converter
-
-**Instantly convert 1,400+ public APIs into Google Gemini-compatible tool schemas and Python function wrappers.**
-
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.32-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
-[![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![License](https://img.shields.io/badge/License-MIT-00ffcc)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
+[Live demo • Streamlit Cat Facts](https://toolify-api.streamlit.app/#cat-facts)
 
 ---
 
-</div>
+## Overview
 
-## 🎯 What Is Toolify-API?
+Toolify-API reads entries from the public-apis registry and generates:
 
-Toolify-API is a cloud-hosted web application that reads the [public-apis/public-apis](https://github.com/public-apis/public-apis) GitHub registry and automatically generates:
+- Gemini-compatible JSON Tool Schemas (FunctionDeclaration objects) for each API
+- Lightweight Python `requests` wrappers with sensible defaults and type hints
+- Integration snippets showing how to register/use the same tool with multiple LLM SDKs (Google Gemini, OpenAI, Anthropic/Claude, Ollama)
+- A Streamlit demo app to explore generated schemas and try API calls interactively
 
-- **🐍 Python `requests` Wrapper Functions** — Copy-paste-ready functions that call any public API with proper authentication handling, error management, and type hints.
-- **🤖 Google Gemini JSON Tool Schemas** — Fully compliant `FunctionDeclaration` objects formatted for the `google-genai` SDK, ready to bind to any Gemini model.
-- **⚙️ SDK Integration Snippets** — Drop-in code showing exactly how to wire each tool into `genai.Client().models.generate_content()`.
-
-> **Data Source:** All API data is fetched live from the [public-apis](https://github.com/public-apis/public-apis) open-source registry.
-
----
-
-## ✨ Key Features
-
-| Feature | Description |
-|---|---|
-| **1,400+ APIs** | Browse the entire public-apis catalog with category filtering |
-| **Gemini-Native Schemas** | Output matches `types.FunctionDeclaration` / `types.Schema` format exactly |
-| **Zero Config** | No API keys needed for the web app itself |
-| **One-Click Copy** | Copy generated Python code or JSON schemas instantly |
-| **Premium Agent Demo** | Full autonomous function-calling loop in `premium_agent.py` |
-| **Dark Theme** | Custom glassmorphism UI with neon-cyan accents |
+This repository includes a premium multi-agent boilerplate demonstrating autonomous tool-calling loops and production-ready agent patterns.
 
 ---
 
-## 🚀 Quick Start — Local Setup
+## Live demo
 
-### Prerequisites
+Try the hosted Streamlit demo and API examples:
 
-- Python 3.10 or higher
-- `pip` package manager
+- Streamlit app (Cat Facts demo): https://toolify-api.streamlit.app/#cat-facts
 
-### Installation
+---
+
+## Quick start
+
+1. Clone this repository:
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/toolify-api.git
-cd toolify-api
+git clone https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack.git
+cd -Premium-Multi-Agent-Boilerplate-Pack
+```
 
-# Install dependencies
+2. Create a virtual environment and install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate    # macOS / Linux
+.\.venv\Scripts\activate   # Windows
 pip install -r requirements.txt
+```
 
-# Launch the app
+3. Run the Streamlit demo locally:
+
+```bash
 streamlit run app.py
 ```
 
-The app will open at `http://localhost:8501`.
-
-### Running the Premium Agent
-
-```bash
-# Set your Gemini API key
-export GEMINI_API_KEY="your-api-key-here"
-
-# Run the autonomous agent demo
-python premium_agent.py
-```
+The app will open at http://localhost:8501 by default.
 
 ---
 
-## ☁️ Deploy to Streamlit Community Cloud
+## Usage examples
 
-Streamlit Community Cloud provides **free hosting** for public Streamlit apps.
+- Call a generated Python wrapper:
 
-### Step-by-Step
+```python
+from api_wrappers.cat_facts import get_cat_facts
+print(get_cat_facts(limit=5))
+```
 
-1. **Push to GitHub** — Upload this project to a public GitHub repository.
+- Use the Gemini/FunctionDeclaration schemas with a Gemini-capable SDK to register tools and let models call them.
 
-2. **Sign in** — Go to [share.streamlit.io](https://share.streamlit.io) and sign in with your GitHub account.
-
-3. **Deploy**:
-   - Click **"New app"**
-   - Select your repository, branch (`main`), and main file path (`app.py`)
-   - Click **"Deploy"**
-
-4. **Configure Secrets** *(optional, for the agent module)*:
-   - In the Streamlit Cloud dashboard, open **Settings → Secrets**
-   - Add:
-     ```toml
-     GEMINI_API_KEY = "your-api-key-here"
-     ```
-
-5. **Done!** — Your app will be live at `https://your-app.streamlit.app`
-
-### Deployment Checklist
-
-- [x] `requirements.txt` with pinned versions
-- [x] `.streamlit/config.toml` with theme configuration
-- [x] No local file dependencies — data fetched from GitHub
-- [x] `st.cache_data` for efficient API calls
+See the `examples/` folder for provider-specific snippets.
 
 ---
 
-## 🏗️ Project Structure
+## Project structure (high level)
 
-```
-toolify-web/
-├── .streamlit/
-│   └── config.toml          # Premium dark theme configuration
-├── requirements.txt          # Pinned Python dependencies
-├── app.py                    # Core Streamlit web application
-├── premium_agent.py          # Gemini autonomous agent runner
-└── README.md                 # This file
-```
-
-### File Overview
-
-| File | Purpose |
-|---|---|
-| `config.toml` | Defines the dark theme: neon cyan primary, deep-dark backgrounds |
-| `requirements.txt` | Streamlit 1.32, Requests 2.32, Google GenAI 0.4 |
-| `app.py` | Fetches APIs, generates Python wrappers + Gemini schemas, renders UI |
-| `premium_agent.py` | Class-based agent with tool registry and function-calling loop |
+- app.py — Streamlit web UI and generator
+- premium_agent.py — Example autonomous agent using the generated tool registry
+- api_wrappers/ — Generated Python wrappers per API
+- schemas/ — Generated Gemini JSON Tool Schemas
+- requirements.txt — Python dependencies
 
 ---
 
-## 🤖 How the Gemini Integration Works
+## Deploy to Streamlit Community Cloud
 
-### Generated Schema Format
+1. Push this repo to GitHub (public repo).
+2. Go to https://share.streamlit.io and click "New app".
+3. Select this repository, the branch (default), and `app.py` as the main file.
 
-Every API is converted into a Gemini-compatible `FunctionDeclaration`:
-
-```json
-{
-  "name": "call_cat_facts",
-  "description": "Daily cat facts",
-  "parameters": {
-    "type": "OBJECT",
-    "properties": {
-      "query": {
-        "type": "STRING",
-        "description": "Search term or resource identifier."
-      }
-    },
-    "required": ["query"]
-  }
-}
-```
-
-### Autonomous Agent Loop
-
-The `premium_agent.py` module implements the full cycle:
-
-```
-User Prompt → Gemini Model → Function Call(s) → Execute HTTP → FunctionResponse → Gemini → Final Answer
-```
-
-This loop runs autonomously for up to 10 turns, handling multi-step tool invocations.
+Optional: add secrets (e.g., GEMINI_API_KEY) in the Streamlit dashboard if you plan to run the premium agent.
 
 ---
 
-## 💎 Premium Multi-Agent Boilerplate Pack
+## License
 
-> **Level up your AI agent development.**
-
-The Premium Pack includes production-ready templates for:
-
-- 🔄 **Multi-tool orchestration** — Chain multiple API calls in a single agent turn
-- 📡 **Streaming responses** — Real-time token streaming with tool interrupts
-- 🌐 **Cloud deployment configs** — Docker, Cloud Run, and Railway templates
-- 🧪 **Testing harness** — Mock tool execution for unit testing agent logic
-- 📊 **Observability** — Built-in logging, token counting, and cost tracking
-
-### 🛒 Get the Premium Pack
-
-| Store / Repository | Link |
-|---|---|
-| **GitHub Repository** | [github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack) |
-| **Gumroad** | [toolify.gumroad.com/l/premium-agent-pack](https://toolify.gumroad.com/l/premium-agent-pack) |
-| **Ko-fi** | [ko-fi.com/toolifyapi](https://ko-fi.com/toolifyapi) |
+This project includes an MIT License file (see LICENSE).
 
 ---
 
-## 📄 License
+## Contact
 
-This project is released under the [MIT License](LICENSE).
+Repository: https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack
+Streamlit demo / API examples: https://toolify-api.streamlit.app/#cat-facts
 
 ---
 
-<div align="center">
-
-**Built with ♥ using [Streamlit](https://streamlit.io) · Powered by the [Premium Multi-Agent Boilerplate Pack](https://github.com/DP1110/-Premium-Multi-Agent-Boilerplate-Pack)**
-
-</div>
-]]>
+Made with Streamlit. README updated by GitHub Copilot on behalf of the repository owner.
