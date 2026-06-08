@@ -34,6 +34,21 @@ ENV/
 env.bak/
 venv.bak/
 
+# Streamlit secrets (excluding config.toml so theme is preserved)
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # Local configuration / secrets
 .idea/
 .vscode/
